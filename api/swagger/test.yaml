@@ -1,0 +1,29 @@
+swagger: "2.0"
+info:
+  title: "GIGI API"
+  description: This is the gigi api Swagger document.
+  version: "1.0.0"
+host: localhost:3000
+basePath: /
+schemes: 
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  "/login":
+    post:
+      operationId: login
+      summary: Login Service
+      parameters:
+       - username: username
+       - password: password
+        description: Api for login user to user
+        required: false
+        type: integer
+      responses:
+        '200':
+          description: User successfully Login
+      tags:
+      - customers

@@ -1,0 +1,68 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: GiGi Buyer Api
+  description: GiGi Buyer Rest API
+
+schemes:
+  - http
+host: localhost:8080
+basePath: /api
+
+paths:
+  /login:
+    post:
+      summary: Login User
+      description: Authenticate the user
+      parameters:
+        - name: user
+          in: body
+          description: Registerd user
+          schema:
+            required:
+              - username
+              - password
+            properties:
+              username:
+                type: string
+              password: 
+                type: string
+      responses:
+        200:
+          description: Login succesfull.
+        400:
+          description: Invalid username or password
+        422:
+          description: Invalid username or password
+
+  /get_past_orders:
+    get:
+      summary: Get past orders 
+      description: Returns single user past orders based on mobile number.
+      parameters:
+        - name: token
+          in: header
+          required: true
+          description: Access Token
+          type: string
+        - name: mobile
+          in: query
+          required: true
+          description: The user's mobile number
+          type: string
+      responses:
+        200:
+          description: Past orders
+          schema:
+            required:
+              - username
+            properties:
+              firstName:
+                type: string
+              lastName:
+                type: string
+              username:
+                type: string
+        404:
+          description: The Person does not exists.

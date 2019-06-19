@@ -1,0 +1,33 @@
+{
+  "master": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "root"
+  },
+
+  "dev": {
+    "driver": "mysql",
+    "user": "gigi_user",
+    "password": "y76hgf$gjJ",
+    "database": "gigi-chernas",
+    "host" : "gigi-staging.c7l1oma4d7nn.ap-southeast-1.rds.amazonaws.com",
+    "port": 3306,
+    "charset" : "utf8mb4"
+  },
+
+  "test": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "root"
+  },
+
+  "prod": {
+    "driver": "mysql",
+    "user": "gigi_user",
+    "password": "y76hgf$gjJ",
+    "database": "gigi-chernas",
+    "host" : "gigi-staging.c7l1oma4d7nn.ap-southeast-1.rds.amazonaws.com",
+    "port": 3306,
+    "charset" : "utf8mb4"
+  }
+}

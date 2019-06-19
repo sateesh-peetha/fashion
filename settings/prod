@@ -1,0 +1,3 @@
+HOST=http://gigi-buyer-api.mobyuat.asia
+GOOGLE_APPLICATION_CREDENTIALS="/home/ubuntu/gigibuyerapi/cloud-vision.json"
+AUTHY_KEY=RMmCOavrCW1gKdQfvVV4ynqVWfcx5enQ
